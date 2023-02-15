@@ -1,6 +1,28 @@
-<div *ngFor="let frase of frases"
-     class="alert alert-ligth text-center border-circle">
-       
-        {{ frase.texto}} 
-  
-</div>
+
+<div class="row">
+       <button (click)="prev()" 
+               class="col-6 card card-body align-items-center button-color">
+
+              Anterior
+       </button>
+
+       <button (click)="next()" 
+               class=" col-6 card card-body align-items-center button-color">
+
+               Següent
+       </button>
+
+    </div> 
+
+
+<div class="mt-4">
+
+
+       <div *ngFor="let frase of frases" 
+            [ngClass]="{'selected': frase.id == currentSentence}"
+            class="alert alert-ligth text-center border-circle">
+
+              {{ frase.texto}}
+       </div>
+
+   </div>
