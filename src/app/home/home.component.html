@@ -1,6 +1,26 @@
-<div class="container mt-4">
 
-    <app-escena [frases]="frases"></app-escena>
+
+
+<div class="container mt-4 d-flex justify-content-center">
+
+    <div *ngIf="start" class="row mt-4">
+        <div>
+            <h2 class="text-center">
+                Benvinguts a l'aplicació S6.Intro Angular
+
+
+            </h2>
+        </div>
+        <button (click)="startBtn()" 
+                 class="col-6 card card-body align-items-center button-color">
+
+              Començar
+       </button>
+        
+    </div>
+
+    <app-escena *ngIf="!start" 
+                [frases]="frases"></app-escena>
 
 </div>
 

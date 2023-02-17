@@ -7,6 +7,8 @@ import { Frase } from '../interfaces/frase.interface';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
+  start: boolean = true;
 
   public frases: Frase[] = [
 
@@ -35,6 +37,10 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  startBtn(){
+    this.start = false;
   }
 
 }
