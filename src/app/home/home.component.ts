@@ -9,27 +9,33 @@ import { Frase } from '../interfaces/frase.interface';
 export class HomeComponent implements OnInit {
   
   start: boolean = true;
+  backgroundImg: string = '/assets/images/1.jpg';
+
 
   public frases: Frase[] = [
 
     {
       id: 1,
-      texto: "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial."
+      txt: "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial.",
+      img: "/assets/images/1.jpg"
 
     },
     {
       id: 2,
-      texto: "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes."
+      txt: "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.",
+      img:"/assets/images/2.jpg"
 
     },
     {
       id: 3,
-      texto: "L'heroi va decidir travessar la porta que el portava a casa."
+      txt: "L'heroi va decidir travessar la porta que el portava a casa.",
+      img: "/assets/images/3.jpg"
 
     },
     {
       id: 4,
-      texto: "Mentrestant, altres heroes no van tenir tanta sort en la seva elecció..."
+      txt: "Mentrestant, altres heroes no van tenir tanta sort en la seva elecció...",
+      img: "/assets/images/4.jpg"
 
     }
   ];
@@ -37,10 +43,21 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   startBtn(){
     this.start = false;
   }
+
+  backgroundHome(img:string){
+    
+    // setTimeout(() => {
+    // }, 0);
+    this.backgroundImg = img;
+    // el siguiente log se imprimirá demasiadas veces en consola
+    console.log(img);
+    return img;
+  };
 
 }

@@ -1,7 +1,8 @@
 
 
 
-<div class="container mt-4 d-flex justify-content-center">
+<div class="d-flex justify-content-center" >
+    
 
     <div *ngIf="start" class="row mt-4">
         <div>
@@ -20,7 +21,11 @@
     </div>
 
     <app-escena *ngIf="!start" 
-                [frases]="frases"></app-escena>
+                [frases]="frases"
+                (backgroundChild) = "backgroundHome($event)"
+                [ngStyle]="{'background-image': 'url(' + backgroundImg + ')'}"
+                class="full-screen"
+                ></app-escena>
 
 </div>
 

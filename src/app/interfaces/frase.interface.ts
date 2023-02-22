@@ -1,4 +1,5 @@
 export interface Frase {
     id: number;
-    texto: string
+    txt: string;
+    img: string;
 }

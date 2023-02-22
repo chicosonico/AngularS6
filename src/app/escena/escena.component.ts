@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Frase } from '../interfaces/frase.interface';
 
 @Component({
@@ -9,6 +9,7 @@ import { Frase } from '../interfaces/frase.interface';
 export class EscenaComponent implements OnInit {
 
   @Input() public frases!:Frase[];
+  @Output() backgroundChild = new EventEmitter<string>();
 
   public currentSentence = 1;
 
@@ -34,6 +35,16 @@ export class EscenaComponent implements OnInit {
 
     }
 
+  };
+
+   checkLoop(){
+    console.log("Hello");
+    
+   }
+
+  childBackground(img: string){
+    this.backgroundChild.emit(img);
+    
   };
 
 }
