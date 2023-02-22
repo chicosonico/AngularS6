@@ -52,10 +52,10 @@ export class HomeComponent implements OnInit {
 
   backgroundHome(img:string){
     
-    // setTimeout(() => {
-    // }, 0);
+    setTimeout(() => {
+    }, 0);
     this.backgroundImg = img;
-    // el siguiente log se imprimirá demasiadas veces en consola
+    // el siguiente log se imprimirá infinitas veces en consola
     console.log(img);
     return img;
   };
